@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtanski <dtanski@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 11:42:35 by dtanski           #+#    #+#             */
-/*   Updated: 2025/07/08 19:49:21 by dtanski          ###   ########.fr       */
+/*   Created: 2025/07/10 16:59:30 by dtanski           #+#    #+#             */
+/*   Updated: 2025/07/10 17:12:55 by dtanski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../inc/Point.hpp"
 #include "../inc/Fixed.hpp"
-#include <iostream>
-int main( void )
+
+Point::Point(): x(0), y(0){}
+
+Point::Point(const float num1, const float num2): x(num1), y(num2){}
+
+Point::Point(const Point &src): x(src.x), y(src.y){}
+
+// It's impossible to use properly assignment overloading to const values
+Point& Point::operator=(const Point& src)
 {
-	Fixed a;
-	Fixed b(a);
-	Fixed c;
-	c = b;
-	
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return 0;
+	(void)src;
+	return *this;
 }
+
+Point::~Point(){};

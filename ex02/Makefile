@@ -6,11 +6,11 @@
 #    By: dtanski <dtanski@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/31 05:10:32 by dtanski           #+#    #+#              #
-#    Updated: 2025/06/25 16:18:46 by dtanski          ###   ########.fr        #
+#    Updated: 2025/07/10 16:21:46 by dtanski          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  harlFilter
+NAME =  ex02
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g 
@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 SRC_DIR = src
 OBJ_DIR = obj
 SRC =	src/main.cpp \
-		src/Harl.cpp \
+		src/Fixed.cpp \
 		
 OBJ = $(SRC:src/%.cpp=obj/%.o)
 

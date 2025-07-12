@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtanski <dtanski@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 11:42:35 by dtanski           #+#    #+#             */
-/*   Updated: 2025/07/08 19:49:21 by dtanski          ###   ########.fr       */
+/*   Created: 2025/07/10 16:46:20 by dtanski           #+#    #+#             */
+/*   Updated: 2025/07/10 16:57:39 by dtanski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Fixed.hpp"
 #include <iostream>
-int main( void )
+#include <cmath>
+#include "Fixed.hpp"
+
+class Point
 {
-	Fixed a;
-	Fixed b(a);
-	Fixed c;
-	c = b;
-	
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return 0;
-}
+	private:
+		const Fixed x;
+		const Fixed y;
+	public:
+	// Constructor
+		Point();
+		Point(const float num1, const float num2);
+	// Copy constructor
+		Point(const Point &src);
+	// Copy assignment operator overload
+		Point& operator=(const Point& src);
+	// Destructor
+		~Point();
+};
+
+bool bsp( Point const a, Point const b, Point const c, Point const point);
