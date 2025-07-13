@@ -6,7 +6,7 @@
 /*   By: dtanski <dtanski@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 16:59:30 by dtanski           #+#    #+#             */
-/*   Updated: 2025/07/10 17:12:55 by dtanski          ###   ########.fr       */
+/*   Updated: 2025/07/13 14:27:21 by dtanski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,13 @@ Point& Point::operator=(const Point& src)
 }
 
 Point::~Point(){};
+
+Fixed Point::getX() const
+{
+	return (x);
+}
+Fixed Point::getY() const
+{
+	return (y);
+}
+

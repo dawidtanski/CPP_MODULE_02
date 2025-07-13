@@ -6,7 +6,7 @@
 /*   By: dtanski <dtanski@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 16:46:20 by dtanski           #+#    #+#             */
-/*   Updated: 2025/07/10 16:57:39 by dtanski          ###   ########.fr       */
+/*   Updated: 2025/07/12 09:07:54 by dtanski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ class Point
 		Point& operator=(const Point& src);
 	// Destructor
 		~Point();
+	// Getter
+		Fixed getX() const;
+		Fixed getY() const;
 };
 
 bool bsp( Point const a, Point const b, Point const c, Point const point);

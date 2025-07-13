@@ -6,11 +6,11 @@
 #    By: dtanski <dtanski@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/31 05:10:32 by dtanski           #+#    #+#              #
-#    Updated: 2025/07/10 16:45:46 by dtanski          ###   ########.fr        #
+#    Updated: 2025/07/13 14:57:43 by dtanski          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  ex02
+NAME =  ex03
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g 
